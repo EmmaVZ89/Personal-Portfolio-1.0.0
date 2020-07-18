@@ -1,0 +1,338 @@
+/*scroll*/
+
+html{
+  scroll-behavior: smooth;
+}
+
+/*reset*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+/*navbar*/
+
+#navbar{
+  width: 100%;
+  height: 3rem;
+  background: #33BD38;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  box-shadow: 2px 2px 4px #2CC98A;
+  z-index: 100;
+}
+#navbar ul{
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbar li{
+  display: inline-block;
+}
+#navbar a{
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+#navbar a:hover{
+  background: rgba(147,201,44,0.8);
+  border-radius: 5px;
+  transform: scale(1.2);
+  box-shadow: 2px 2px 4px #2CC98A;
+}
+
+/*welcome-section*/
+
+#welcome-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  margin-top: 3rem;
+  background: linear-gradient(100deg,#000, #61D42F, #000);
+}
+#welcome-section h1{
+  font-size: 3.5rem;
+  font-weight: bolder;
+  color: #fff;
+  text-shadow: 2px 2px #000;
+}
+#welcome-section p{
+  font-size: 2rem;
+  font-weight: lighter;
+  color: #ccc;
+  text-shadow: 2px 2px #000;
+}
+
+/*projects*/
+
+#projects{
+  background: linear-gradient(45deg, #2ABF59, silver);
+  text-shadow: 2px 2px 4px #000;
+}
+#projects h2{
+  text-align: center;
+  font-size: 2.5rem;
+  padding-top: 2rem;
+  color: #fff;
+}
+
+.grid-projects{
+  width: 100%;
+  display: grid;
+  text-align: center;
+  padding: 3rem;
+  grid-template-areas:
+  "tpage sform lpage tdocumentation";
+}
+.grid-projects img{
+  width: 14rem;
+  height: 14rem;
+  box-shadow: 4px 4px 2px #000;
+  object-fit: cover;
+}
+.grid-projects a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.grid-projects img:hover{
+  background: rgba(147,201,44,0.8);
+  transform: scale(0.9);
+  transition: 0.8s;
+  box-shadow: 8px 8px 8px #000, -8px -8px 8px #000, -8px 8px 8px #000, 8px -8px 8px #000;
+  filter: saturate(180%);
+}
+.grid-projects p{
+  padding: 0.2rem;
+  margin-top: 0.5rem;
+  background: rgba(0,0,0,0.8);
+  box-shadow: 4px 4px 2px #000;
+  border-radius: 10px;
+}
+.grid-projects p:hover{
+  background: rgba(147,201,44,0.8);
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px #000, -4px -4px 4px #000, -4px 4px 4px #000, 4px -4px 4px #000;
+  transition: 0.5s;
+  transform: scale(1.05);
+  text-shadow: 1px 1px #000;
+}
+.tpage{
+  grid-area: tpage;
+}
+.sform{
+  grid-area: sform;
+}
+.lpage{
+  grid-area: lpage;
+}
+.tdocumentation{
+  grid-area: tdocumentation;
+}
+.project-tile{
+  padding: 2rem;
+}
+
+#profile-link{
+  width: 20rem;
+  height: auto;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 4px;
+  color: #fff;
+  font-size: 1.5rem;
+  background: rgba(0,0,0,0.8);
+  box-shadow: 4px 4px 4px #2CC98A;
+  border-radius: 10px;
+  padding: 0.5rem 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+#profile-link:hover{
+  background: rgba(147,201,44,0.8);
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px #000, -4px -4px 4px #000, -4px 4px 4px #000, 4px -4px 4px #000;
+  transition: 0.5s;
+  transform: scale(1.05);
+  text-shadow: 1px 1px #000;
+}
+.div-profile{
+  width: 100%;
+  height: 4rem;
+}
+
+/*about*/
+#about{
+  background: linear-gradient(45deg,#2CC98A, silver );
+  text-shadow: 2px 2px 4px #000;
+}
+#about img{
+  display: block;
+  width: auto;
+  height: 100%;
+  margin-left: -5.5rem;
+}
+#about img:hover{
+  transform: scale(1.2);
+  transition: 0.8s;
+}
+#about h3{
+  padding: 1rem;
+  color: #fff;
+  font-size: 2rem;
+}
+#about p{
+  padding: 1rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+#about ul{
+  padding: 0 3rem;
+  color: #fff;
+  list-style: none;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
+}
+.grid-about{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+  "skills img"
+  "hobbies img"
+}
+.skills{
+  grid-area: skills;
+}
+.hobbies{
+  grid-area: hobbies;
+}
+.divimg{
+  grid-area: img;
+  display: inline-block;
+  position: relative;
+  width: 30rem;
+  height: 30rem;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 8px 8px 8px #000;
+  border: 2px solid #000;
+  margin-bottom: 2rem;
+}
+
+/*contact*/
+
+#contact{
+  background: linear-gradient(180deg, #33BD38, #aaa);
+  color: #fff;
+  text-shadow: 2px 2px 1px #000;
+}
+#contact h3{
+  text-align: center;
+  font-size: 2rem;
+  padding: 1rem;
+}
+#contact img{
+  width: 2.5rem;
+}
+#contact a{
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.3rem;
+  padding: 1rem;
+}
+#contact a:hover{
+  background: rgba(255,255,255,0.3);
+  box-shadow: 4px 4px 4px #000;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+.contact{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+/*footer*/
+
+footer{
+  background: linear-gradient(180deg, #aaa, #000);
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: right;
+  padding: 1rem;
+}
+
+/*media*/
+@media(max-width: 800px){
+  .grid-projects{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "tpage sform"
+    "lpage tdocumentation";
+  }
+  
+}
+@media(max-width: 500px) {
+  .grid-projects{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "tpage"
+    "sform"
+    "lpage"
+    "tdocumentation";
+  }
+  .grid-about{
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "img"
+    "skills"
+    "hobbies"
+  }
+  .divimg{
+   width: 15rem;
+   height: 15rem;
+   margin: auto;
+  }
+  #about img{
+    margin-left: -3rem;
+  }
+  .contact{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+  }
+  #navbar a{
+    font-size: 1rem;
+  }
+  #welcome-section h1{
+  text-align: center;
+  line-height: 6rem;
+  }
+  #welcome-section p{
+    text-align: center;
+    line-height: 3rem;
+  }
+}
